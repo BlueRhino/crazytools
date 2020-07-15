@@ -1,11 +1,29 @@
 {% extends "common/base.html" %}
+{% set navbar_active_item = "home" %}
 {% block title %}Index{% endblock %}
-{% block head %}
-    {{ super() }}
-{% endblock %}
 {% block content %}
-    <h1>Index</h1>
-    <p class="important">
-      Welcome to my awesome homepage.
-    </p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 offset-4">
+                <form>
+                    <div class="form-check checkbox-inline">
+                        <input  type="checkbox" value="" id="ocr_language_cn">
+                        <label for="ocr_language_cn">
+                            CN
+                        </label>
+                    </div>
+                    <div class="form-check checkbox-inline">
+                        <input type="checkbox" value="" id="ocr_language_en">
+                        <label  for="ocr_language_en">
+                            EN
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="ocr_img">OCR image file</label>
+                        <input type="file" class="form-control-file" id="ocr_img">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}

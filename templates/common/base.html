@@ -14,23 +14,14 @@
     {% endblock %}
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">
-        <img src="/static/img/toolbox.png" width="30" height="30" alt="">
-    </a>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<div id="content">{% block content %}{% endblock %}</div>
+{% block navbar %}
+    {% include "common/navbar.html" %}
+{% endblock %}
+{% block content %}{% endblock %}
 <nav class="navbar fixed-bottom navbar-light bg-light">
     {% block footer %}
-        <a href="https://github.com/BlueRhino/crazytools" target="_blank" title="source code"> <i class="fab fa-github"> </i></a>
+        <a href="https://github.com/BlueRhino/crazytools" target="_blank" title="source code"> <i
+                class="fab fa-github"> </i></a>
     {% endblock %}
 </nav>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>

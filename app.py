@@ -1,4 +1,4 @@
-from flask import Flask, current_app
+from flask import Flask, current_app, request
 from flask import render_template
 
 app = Flask(__name__)
@@ -13,6 +13,12 @@ def hello_world():
 def get_fav():
     print(__name__)
     return current_app.send_static_file('img/favicon.ico')
+
+
+@app.route('/easyocr', methods=["POST"])
+def easyocr():
+    request.form.get("")
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
